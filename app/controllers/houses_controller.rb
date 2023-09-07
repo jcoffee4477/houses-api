@@ -20,4 +20,15 @@ def create
   render :show
 end
 
+def update
+  @house = House.find_by(id: params[:id])
+  @house.update(
+    squarefeet: params[:squarefeet],
+    bedrooms: params[:bedrooms],
+    bathrooms: params[:bathrooms],
+    address: params[:address],
+  )
+  render :show
+end
+
 end
