@@ -31,4 +31,10 @@ def update
   render :show
 end
 
+def destroy
+  @house = House.find_by(id: params[:id])
+  @house.destroy
+  render json: { message: "destroyed successfully"}
+end
+
 end

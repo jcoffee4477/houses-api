@@ -8,5 +8,5 @@ get "/houses" => "houses#index"
 get "/houses/:id" => "houses#show"
 post "/houses" => "houses#create"
 patch "/houses/:id" => "houses#update"
-
+delete "/houses/:id" => "houses#destroy"
 end
